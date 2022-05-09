@@ -1,0 +1,25 @@
+NETWORK:
+  num_cls: 2 #fixed for our dataset-DAD
+  fps: 20 #fixed for our dataset-DAD
+  lr: 0.0001
+  batch_size: 10 
+  epoch: 10
+  input_dim: [224,224]
+  n_mean: [0.5,0.5,0.5]
+  n_std: [0.5,0.5,0.5]
+  h_dim: 256
+  z_dim: 128
+  n_layers: 1
+  dropout: [0.5,0.3]
+  gpu_id: '0'
+  extractor: resnet50 
+  loss_type: exponential 
+  network_type: gru #we choose gru over cnn
+DIRECTORY:
+  train_dir: ./data/train/
+  test_dir: ./data/test/
+  demo_dir: ./demo/000605
+  destination_dir: ../explanation/ #demo will be stored here after inference
+  model_dir: ../snapshot
+  logs_dir: ../logs
+  best_weight: ../snapshot/best_model.pth

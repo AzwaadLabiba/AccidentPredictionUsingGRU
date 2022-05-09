@@ -1,0 +1,1 @@
+We put the test frames in the test folder and the train dataset in the train folder.
